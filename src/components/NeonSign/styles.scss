@@ -1,0 +1,23 @@
+.scroll {
+  width: 100%;
+  display: flex;
+}
+
+.scroll div {
+  color: white;
+  font-size: 4em;
+  white-space: nowrap;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
