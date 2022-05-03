@@ -1,11 +1,10 @@
 import React from "react";
-import Background from "./components/Background/Background";
+import Home from "./pages/Home/Home";
 
 function App() {
-
   return (
     <>
-      <Background/>
+      <Home />
     </>
   );
 }

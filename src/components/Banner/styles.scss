@@ -1,0 +1,183 @@
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+}
+
+#backText {
+  font-family: "Oswald";
+
+  color: white;
+  font-size: 14em;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 1200px) {
+    white-space: nowrap;
+    font-size: 9em;
+  }
+
+  @media screen and (max-width: 900px) {
+    white-space: nowrap;
+    font-size: 6.5em;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 4.5em;
+  }
+}
+
+.content {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#video {
+  display: none;
+  position: absolute;
+  z-index: 3;
+}
+
+p {
+  color: white;
+}
+
+.textShadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+  font-family: "Oswald";
+  white-space: nowrap;
+  color: white;
+  font-size: 0.7em;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .firstWord::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+.textGenerator:after {
+  content: "World";
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    content: "World";
+  }
+  20% {
+    content: "Mom";
+  }
+  50% {
+    content: "WEB3";
+  }
+  70% {
+    content: "Blockchain";
+  }
+}
+
+.scrollLine {
+  margin: 0;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border-left: 2px solid white;
+  height: 50px;
+}
+
+.scrollText {
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  color: white;
+  left: 50%;
+  height: 35px;
+  bottom: 0;
+  margin-left: 15px;
+}
